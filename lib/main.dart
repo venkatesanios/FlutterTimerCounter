@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:timer_count/CounterPage.dart';
 import 'package:timer_count/counter.dart';
 
 void main() {
@@ -150,7 +151,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 label: Text('Start'))
           ],
         ),
+        
       ),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+           Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CounterPage()),
+          );
+      },),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
